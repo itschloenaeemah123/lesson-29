@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON in JS</title>
+</head>
+<body>
+<h2> convert Javascricpt objects into JSON objects and send it to a server.</h2>  
+<p id="result"></p>  
+<script>
+  var myobj ={Name:"Riya", Age:"12", Grade:"6"};
+
+  var myJSON = JSON.stringfy(myobj);//converts JS objects to JSON to send data
+
+var newobj = JSON.parse(myJSON);//converts JSON objects to recieve data
+
+document.getElementById("result").innerHTML = newobj.Name + ",Age: "+
+                                              newobj.Age + "Grade: "+
+                                              newobj.Grade
+</script>
+</body>
+</html> 
